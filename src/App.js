@@ -1,22 +1,36 @@
-import { useEffect } from 'react';
-import './style.css'
-import Test from './Test';
-import { Title } from './Components';
-import './tailwind.css';
+import { createElement, Fragment } from 'react';
+import  './style.scss';
+
 
 function App() {
-  useEffect(() => {
-    if(process.env.NODE_ENV === 'production') {
 
-    }
-  }, [])
+  const todos = [ 'todo1', 'todo2', 'todo3']
+  // const h1 = createElement('h1', null , 'pro')
+  // const ul = createElement ('ul', null, todos.map(todo => createElement('li', null, todo)))
+
+  // return createElement('main', {
+  //   className: 'test',
+  //   id:'main'
+  // }, h1, ul)
+
 
   return (
-    <div className="App">
-      <Title>{process.env.NODE_ENV}</Title>
-      <Title theme="dark">{process.env.REACT_APP_API_URL}</Title>
-      <Test></Test>
-    </div>
+    <Fragment>
+      <h1 style={{color: 'red', backgroundColor: 'yellow'}}>pro</h1>
+      <label htmlFor='search' tabIndex="2"> 
+        Arama
+      </label>
+      <input type='index' id= 'search' tabIndex="1"/>
+
+
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>
+            {todo}
+          </li>
+        ))}
+      </ul>
+    </Fragment>
   );
 }
 
