@@ -1,2 +1,2 @@
 # REACT PROJESİ
-### React ile Proje geliştirmek Prototürk
+### React ile Proje geliştirmek Video Serisi
