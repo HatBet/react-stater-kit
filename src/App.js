@@ -1,14 +1,10 @@
-import Ders7 from './ders7';
-import './style.scss';
-import './tailwind.css';
-
-
+import Todo from "./todo";
 
 function App() {
 
   return (
     <>
-      Ders7 de tamamlandı  
+    <Todo/>
     </>
   );
 }
