@@ -1,15 +1,18 @@
-import Focus from './Focus';
+import Ders7 from './ders7';
 import './style.scss';
-import './tailwind.css'
+import './tailwind.css';
+
+
 
 function App() {
 
   return (
     <>
-
-  <Focus/>
+      Ders7 de tamamlandı  
     </>
   );
 }
 
 export default App;
+
+
