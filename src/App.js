@@ -1,18 +1,18 @@
-import { useState } from 'react';
+import Ders7 from './ders7';
 import './style.scss';
-import './tailwind.css'
-import Test from './Test';
+import './tailwind.css';
+
+
 
 function App() {
-const [show, setShow] = useState(false)
+
   return (
     <>
-    <button onClick={() => setShow(show => !show)}>
-      {show ? ' Gizle' : 'Göster'}
-    </button>
-    { show && <Test/> }
+      Ders7 de tamamlandı  
     </>
   );
 }
 
 export default App;
+
+
