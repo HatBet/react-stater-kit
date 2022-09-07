@@ -1,3 +1,4 @@
+import {memo} from "react";
 function AddTodo({submitHandle, onChange, todo}){
     return (
     <form onSubmit={submitHandle}>
@@ -6,4 +7,4 @@ function AddTodo({submitHandle, onChange, todo}){
     </form>
     )
 }
-export default AddTodo;
+export default memo(AddTodo);
