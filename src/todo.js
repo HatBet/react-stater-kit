@@ -1,7 +1,10 @@
 import { useReducer}  from "react"
+import AddTodo from "./AddTodo";
 import todoReducer from "./reducers/todoReducer";
+import TodoList from "./todoList";
 
 function Todo() {
+    console.log('app render');
     const [state, dispatch] =useReducer(todoReducer, {
         todos:[],
         todo:''
@@ -25,21 +28,11 @@ function Todo() {
             value: e.target.value
         })
     }
-    console.log(state)
     return (
         <>
         <h1>Todo App</h1>
-        <form onSubmit={submitHandle}>
-            <input type="text" value={state.todo} onChange={onChange} />
-            <button type="submit" disabled={!state.todo}> Ekle</button>
-        </form>
-        <ul>
-            {state.todos.map((todo, index) => (
-                  <li key={index}>
-                  {todo}
-              </li>
-            ))}
-        </ul>
+            <AddTodo onChange={onChange}  submitHandle={submitHandle} state= {state} />
+            <TodoList todos={state.todos} />
         </>
     )
 }
