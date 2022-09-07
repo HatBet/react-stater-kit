@@ -31,7 +31,7 @@ function Todo() {
     return (
         <>
         <h1>Todo App</h1>
-            <AddTodo onChange={onChange}  submitHandle={submitHandle} state= {state} />
+            <AddTodo onChange={onChange}  submitHandle={submitHandle} todo= {state.todo} />
             <TodoList todos={state.todos} />
         </>
     )

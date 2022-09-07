@@ -1,8 +1,8 @@
-function AddTodo({submitHandle, onChange, state}){
+function AddTodo({submitHandle, onChange, todo}){
     return (
     <form onSubmit={submitHandle}>
-        <input type="text" value={state.todo} onChange={onChange} />
-        <button type="submit" disabled={!state.todo}> Ekle</button>
+        <input type="text" value={todo} onChange={onChange} />
+        <button type="submit" disabled={!todo}> Ekle</button>
     </form>
     )
 }
