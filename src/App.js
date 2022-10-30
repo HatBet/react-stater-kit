@@ -1,10 +1,10 @@
-import Todo from "./todo";
+import FormUsing from "./formUsing";
 
 function App() {
 
   return (
     <>
-    <Todo/>
+    <FormUsing/>
     </>
   );
 }
